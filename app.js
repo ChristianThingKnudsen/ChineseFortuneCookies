@@ -1,19 +1,30 @@
-//Load HTTP module
-const http = require("http");
-const hostname = "127.0.0.1";
-const port = 80;
+var express = require('express');
+var app = express();
+app.use(express.static('public'));
 
-//Create HTTP server and listen on port 3000 for requests
-const server = http.createServer((req, res) => {
-  //Set the response HTTP header with HTTP status and Content type
-  res.statusCode = 200;
-  res.writeHead(200, { "content-type": "text/html" });
-  // fs.createReadStream("index.html").pipe(res);
-  // res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World\n");
-});
+app.get('/index.htm', function (req, res) {
+  res.sendFile( __dirname + "/" + "index.htm" );
+})
 
-//listen for request on port 3000, and as a callback function have the port listened on logged
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.get('/process_get', function (req, res) {
+  // Prepare output in JSON format
+  response = {
+     first_name:req.query.first_name,
+     last_name:req.query.last_name
+  };
+  console.log(response);
+  res.end(JSON.stringify(response));
+})
+
+// This responds with "Hello World" on the homepage
+app.get('/', function (req, res) {
+  console.log("Got a GET request for the homepage");
+  res.send('Hello GET');
+})
+
+var server = app.listen(8081, function () {
+   var host = server.address().address
+   var port = server.address().port
+   
+   console.log("Example app listening at http://%s:%s", host, port)
+})
