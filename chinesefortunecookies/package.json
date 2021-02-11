@@ -1,0 +1,19 @@
+{
+  "name": "chinesefortunecookies",
+  "version": "1.0.0",
+  "description": "DPS project 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianThingKnudsen/ChineseFortuneCookies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianThingKnudsen/ChineseFortuneCookies/issues"
+  },
+  "homepage": "https://github.com/ChristianThingKnudsen/ChineseFortuneCookies#readme"
+}
