@@ -1,11 +1,20 @@
 <html>
+   <head>
+      <title>Chinese Fortune Cookies</title>
+   </head>
+   <script>
+      const url = "http://127.0.0.1:8081/";
+   </script>
    <body>
-      
-      <form action = "http://127.0.0.1:8081/process_get" method = "GET">
-         First Name: <input type = "text" name = "first_name">  <br>
-         Last Name: <input type = "text" name = "last_name">
-         <input type = "submit" value = "Submit">
-      </form>
-      
+
+      <h1 id="1234">Chinese Fortune Cookies</h1>
+      <button type="button" onclick='fetch(url).then(res => {
+         res.text().then(t => {
+           document.getElementById("1234").innerHTML = t;
+         })
+       })
+       '>Click Me!</button>
+
    </body>
+   
 </html>
