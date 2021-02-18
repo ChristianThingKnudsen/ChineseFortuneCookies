@@ -37,11 +37,11 @@ var cookies = ["Today it’s up to you to create the peacefulness you long for."
   "You must try, or hate yourself for not trying.",
   "You can make your own happiness."]
 
-app.get('/index.htm', function (req, res) {
+app.get('/', function (req, res) {
   res.sendFile( __dirname + "/" + "index.htm" );
 })
 
-app.get('/', function (req, res) {
+app.get('/cookies', function (req, res) {
   console.log(res);
   const length = cookies.length;
   var rnd = Math.floor(Math.random()*length);
@@ -49,9 +49,7 @@ app.get('/', function (req, res) {
   res.end(cookies[rnd]);
 })
 
-app.get('')
-
-var server = app.listen(8081, function () {
+var server = app.listen(8080, function () {
    var host = server.address().address
    var port = server.address().port
    

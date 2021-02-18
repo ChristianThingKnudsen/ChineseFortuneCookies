@@ -3,16 +3,21 @@
       <title>Chinese Fortune Cookies</title>
       <link rel="stylesheet" type="text/css" href="/style.css">
    </head>
+   
+      
    <script src="/getCookies.js"></script>
-   <script>
-      const url = "http://127.0.0.1:8081/";
-   </script>
+   <!-- <script>
+      const url = "http://127.0.0.1:8080/cookies";
+   </script> -->
+   
    <body>
 
       <h1>Chinese Fortune Cookies</h1>
       <h2 id="1234">Look here for fortune cookie!</h2>
-      <button type="button" onclick='getFortune(url)'>Get cookie!</button>
-
+      <button type="button" onclick='getFortune()'>Get cookie!</button>
+      <img id="goat" src="/images/goat.jpg" class="center">
+      <img id="fc" src="/images/fortune_cookie.png">
+      
    </body>
    
 </html>

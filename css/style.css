@@ -1,9 +1,43 @@
 body {
-  background-color: lightblue;
+  background-color: tomato;
+  font-family: "Papyrus";
+  text-align: center;
+  margin: auto;
 }
 
 h1 {
-  color: navy;
-  margin-left: 20px;
+  padding-top: 30px;
+  color: yellow;
 }
-  
+
+h2 {
+  color: yellow;
+}
+
+button {
+  color: yellow;
+  background-color: darkgreen;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  height: 50px;
+  width: 300px; 
+  font-family: "Papyrus";
+  font-size: 20;
+}
+
+#fc {
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+#goat {
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
