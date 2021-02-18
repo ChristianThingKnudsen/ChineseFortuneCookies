@@ -1,5 +1,6 @@
 # To run this app
 
+$ npm install
 $ node app.js
 
 And then access the url in the browser
